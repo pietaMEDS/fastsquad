@@ -2,55 +2,43 @@ using Sandbox;
 
 public sealed class ZombieAi : Component
 {
-    private float health = 20f;
+    [Property] private float damage = 5f;
+    [Property] private float attackRange = 35f;
+    [Property] private float attackCooldown = 1f;
     private NavMeshAgent agent;
     private GameObject targetEndPoint;
-    
+
+    private float attackTimer = Time.Now;
+
     protected override void OnStart()
     {
         agent = GameObject.GetComponent<NavMeshAgent>();
         targetEndPoint = Scene.Directory.FindByName("ZombieEndPath", false).FirstOrDefault();
     }
     
+    public void Attack(GameObject target)
+    {
+        
+        if (attackTimer > Time.Now) return; // Still in cooldown
+        
+        var healthComp = target.GetComponent<HealthComponent>();
+        if (healthComp != null)
+        {
+            healthComp.TakeDamage(damage);
+            attackTimer = Time.Now + attackCooldown; // Reset cooldown
+        }
+    }
+
     protected override void OnUpdate()
     {
         if (agent == null || targetEndPoint == null)
             return;
         
         agent.MoveTo(targetEndPoint.WorldPosition);
-    }
-    
-    public void TakeDamage(float damage)
-    {
-        health -= damage;
-        Log.Info($"{GameObject.Name} took {damage} damage! HP: {health}/20");
-        
-        if (health <= 0)
+
+        if (GameObject.WorldPosition.Distance(targetEndPoint.WorldPosition) < attackRange)
         {
-            Log.Info($"{GameObject.Name} died!");
-            GameObject.Destroy();
+            Attack(targetEndPoint.Parent);
         }
     }
 }
-
-
-// [
-//   {
-//     "__guid": "547f6be0-9bfb-4a08-b41a-00f2b80eab6a",
-//     "__version": 2,
-//     "Flags": 0,
-//     "Name": "ZombieEndPath",
-//     "Position": "-2678.995,-165.4318,45.27068",
-//     "Rotation": "0,0,0,1",
-//     "Scale": "1,1,1",
-//     "Tags": "",
-//     "Enabled": true,
-//     "NetworkMode": 2,
-//     "NetworkFlags": 0,
-//     "NetworkOrphaned": 0,
-//     "NetworkTransmit": true,
-//     "OwnerTransfer": 1,
-//     "Components": [],
-//     "Children": []
-//   }
-// ]

@@ -737,15 +737,31 @@
               "IdValue": "a4966e77-cfaf-4705-849f-2e40b98b8258"
             },
             "Property": "Position",
-            "Value": "-2903.218,-923.3981,182.0308"
+            "Value": "-223.9939,1338.081,52.61649"
           },
           {
             "Target": {
-              "Type": "GameObject",
-              "IdValue": "a4966e77-cfaf-4705-849f-2e40b98b8258"
+              "Type": "Component",
+              "IdValue": "a4fd4eee-4160-45e2-ace5-b77511784af8"
             },
-            "Property": "Rotation",
-            "Value": "0,0,0,0.9999999"
+            "Property": "Damage",
+            "Value": 5
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "a4fd4eee-4160-45e2-ace5-b77511784af8"
+            },
+            "Property": "FireRange",
+            "Value": 800
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "a4fd4eee-4160-45e2-ace5-b77511784af8"
+            },
+            "Property": "FireRate",
+            "Value": 2
           }
         ],
         "MovedObjects": []
@@ -782,7 +798,7 @@
     "GameObjectSystems": {
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "29b40707-df42-4ec8-bfc7-1ea3920b55a2"
+          "$blob": "844ba50d-e146-4676-b2af-ba68a4be8965"
         }
       }
     }

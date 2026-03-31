@@ -88,6 +88,9 @@
         "__guid": "504c5eb2-8b4c-445f-a646-546f78478301",
         "__enabled": true,
         "Flags": 0,
+        "attackCooldown": 1,
+        "attackRange": 35,
+        "damage": 5,
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -151,7 +154,7 @@
         "__guid": "e684e492-7ce7-48e3-94a5-dcbcb10df05f",
         "__enabled": true,
         "Flags": 0,
-        "AnimationGraph": "animations/zombie.vanmgrph",
+        "AnimationGraph": null,
         "BodyGroups": 18446744073709551615,
         "BoneMergeTarget": null,
         "CreateAttachments": false,
@@ -190,6 +193,20 @@
         },
         "Tint": "1,1,1,1",
         "UseAnimGraph": true
+      },
+      {
+        "__type": "HealthComponent",
+        "__guid": "5099abf2-b5a0-4e81-97ff-06c3cc27b6ef",
+        "__enabled": true,
+        "Flags": 0,
+        "health": 20,
+        "maxHealth": 100,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null
       }
     ],
     "Children": [

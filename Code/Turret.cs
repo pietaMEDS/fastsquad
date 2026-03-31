@@ -92,7 +92,8 @@ public sealed class Turret : Component
         var enemy = tr.GameObject?.Components.Get<ZombieAi>();
         if (enemy != null)
         {
-            enemy.TakeDamage(Damage);
+            var healthComp = enemy.GameObject.GetComponent<HealthComponent>();
+            healthComp?.TakeDamage(Damage);
         }
     }
 }
