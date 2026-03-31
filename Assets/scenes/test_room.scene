@@ -54,7 +54,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "Sun",
-      "Position": "94.47574,26.88936,339.4334",
+      "Position": "-539.7335,-83.74179,370.5322",
       "Rotation": "0,0.8660254,0,0.5000001",
       "Scale": "1,1,1",
       "Tags": "light_directional,light",
@@ -651,13 +651,13 @@
       ]
     },
     {
-      "__guid": "e01a13e5-47e0-4fbf-a100-7e8a5596cacd",
+      "__guid": "1b7ded95-1eb9-4218-80d8-d7d31530f6ba",
       "__version": 2,
       "Flags": 0,
-      "Name": "Cube",
-      "Position": "-2685.049,-1269.348,57.02942",
+      "Name": "balloonheart01",
+      "Position": "-1854.791,-955.689,100.0139",
       "Rotation": "0,0,0,1",
-      "Scale": "42.33429,1,1.469297",
+      "Scale": "10,10,10",
       "Tags": "",
       "Enabled": true,
       "NetworkMode": 2,
@@ -667,8 +667,29 @@
       "OwnerTransfer": 1,
       "Components": [
         {
+          "__type": "Sandbox.Prop",
+          "__guid": "977eb5cc-33d2-4060-88df-95a12b132c50",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "Health": 1,
+          "IsStatic": false,
+          "MaterialGroup": null,
+          "Model": "models/citizen_props/balloonheart01.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        },
+        {
           "__type": "Sandbox.ModelRenderer",
-          "__guid": "8da92959-ff96-48d1-aa2a-c4553fa7b66b",
+          "__guid": "7781ddff-e97b-42be-aaca-485c4d4b7792",
           "__enabled": true,
           "Flags": 0,
           "BodyGroups": 18446744073709551615,
@@ -677,7 +698,7 @@
           "MaterialGroup": null,
           "MaterialOverride": null,
           "Materials": null,
-          "Model": "models/dev/box.vmdl",
+          "Model": "models/citizen_props/balloonheart01.vmdl",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -694,15 +715,15 @@
           "Tint": "1,1,1,1"
         },
         {
-          "__type": "Sandbox.BoxCollider",
-          "__guid": "4dad2b3c-4120-4679-a8d5-f47bfbc27a15",
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "015022b3-184f-426a-9c0a-0835b729cf05",
           "__enabled": true,
           "Flags": 0,
-          "Center": "0,0,0",
-          "ColliderFlags": 0,
+          "ColliderFlags": "IgnoreMass",
           "Elasticity": null,
           "Friction": null,
-          "IsTrigger": true,
+          "IsTrigger": false,
+          "Model": "models/citizen_props/balloonheart01.vmdl",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -711,50 +732,187 @@
           "OnComponentUpdate": null,
           "OnObjectTriggerEnter": null,
           "OnObjectTriggerExit": null,
-          "OnTriggerEnter": {
-            "__version": 9,
-            "__guid": "4bfe8af7-3e80-44b5-a262-665b3d8c3cc5",
-            "__changeId": 20,
-            "UserData": {
-              "Title": "On Collider Enter",
-              "ReferencedComponentTypes": []
-            },
-            "Variables": [],
-            "Nodes": [
-              {
-                "Id": 0,
-                "Type": "input"
-              },
-              {
-                "Id": 4,
-                "Type": "property",
-                "Properties": {
-                  "_name": "GameObject",
-                  "_type": "Sandbox.Component"
-                },
-                "UserData": {
-                  "Position": "156,120"
-                }
-              }
-            ],
-            "Links": [
-              {
-                "SrcId": 0,
-                "SrcName": "obj",
-                "DstId": 4,
-                "DstName": "_target"
-              }
-            ]
-          },
+          "OnTriggerEnter": null,
           "OnTriggerExit": null,
           "RollingResistance": null,
-          "Scale": "50,50,50",
-          "Static": true,
+          "Static": false,
           "Surface": null,
           "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "3ffe3d5e-566c-4e01-a996-f33d0a65debb",
+          "__enabled": true,
+          "Flags": 0,
+          "AngularDamping": 0,
+          "EnableImpactDamage": true,
+          "EnhancedCcd": false,
+          "Gravity": true,
+          "GravityScale": 1,
+          "ImpactDamage": 0,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": false,
+            "Y": false,
+            "Z": false,
+            "Pitch": false,
+            "Yaw": false,
+            "Roll": false
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MinImpactDamageSpeed": 500,
+          "MotionEnabled": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "Turret",
+          "__guid": "2d1fa618-1545-4cc8-9c60-de8c4adf4ea9",
+          "__enabled": true,
+          "Flags": 0,
+          "DetectionRange": 1000,
+          "EnemyTag": "enemy",
+          "InstantRotation": false,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RotationSpeed": 180
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "7fba4a10-207d-4180-9b4b-3a667515a940",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "Object",
+          "Position": "0,0,0",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": []
+        }
+      ]
+    },
+    {
+      "__guid": "d1087dfa-c41b-4563-a602-d51a4f7942c3",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "turret",
+      "Position": "-3489.279,-959.1813,119.4567",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "b62b56ae-27bd-4b9a-88a8-24996e55e031",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/turret.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Turret",
+          "__guid": "76055cfd-1aee-4057-b41a-5554d61a73c9",
+          "__enabled": true,
+          "Flags": 0,
+          "DetectionRange": 1E+09,
+          "EnemyTag": "enemy",
+          "InstantRotation": false,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RotationSpeed": 180
         }
       ],
       "Children": []
+    },
+    {
+      "__guid": "8c23c035-f9f6-4636-ae84-dba4ee4a03f6",
+      "__version": 2,
+      "__Prefab": "prefabs/turret.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "a4966e77-cfaf-4705-849f-2e40b98b8258"
+            },
+            "Property": "Name",
+            "Value": "turret (1)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "a4966e77-cfaf-4705-849f-2e40b98b8258"
+            },
+            "Property": "Position",
+            "Value": "-2903.218,-923.3981,182.0308"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "a4966e77-cfaf-4705-849f-2e40b98b8258"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0,0.9999999"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "a4966e77-cfaf-4705-849f-2e40b98b8258": "8c23c035-f9f6-4636-ae84-dba4ee4a03f6",
+        "f7138992-8b7c-493b-8ade-50856d4b1733": "a811553d-89ec-45da-881b-a9900922da84",
+        "a4fd4eee-4160-45e2-ace5-b77511784af8": "dbb7469c-cc9c-46f9-895f-ba9607696aa9"
+      }
     }
   ],
   "SceneProperties": {
@@ -782,7 +940,7 @@
     "GameObjectSystems": {
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "334bf8bc-b3ea-4228-9a8e-08bf2e600172"
+          "$blob": "c17e82b9-1741-4f0b-8a58-17065dab0020"
         }
       }
     }
