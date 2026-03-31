@@ -6,7 +6,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "Main Camera",
-      "Position": "-300,0,100",
+      "Position": "-2671.21,0,100",
       "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
       "Tags": "",
@@ -50,150 +50,11 @@
       "Children": []
     },
     {
-      "__guid": "9218f4a2-c13d-4259-9ae8-5171b11cf14e",
-      "__version": 2,
-      "Flags": 0,
-      "Name": "Directional Light",
-      "Position": "0,0,200",
-      "Rotation": "-0.2459842,0.5938582,0.2931525,0.7077327",
-      "Scale": "1,1,1",
-      "Tags": "light_directional,light",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
-        {
-          "__type": "Sandbox.DirectionalLight",
-          "__guid": "72ae3d7b-afdd-4cf8-b3da-f0a436ef67da",
-          "__enabled": true,
-          "Flags": 0,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Shadows": true,
-          "SkyColor": "0,0,0,0"
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "b3b37070-06db-4a19-9da7-9f09367d059e",
-      "__version": 2,
-      "Flags": 0,
-      "Name": "Cube",
-      "Position": "-23.66938,14.02622,-26.24393",
-      "Rotation": "0,0,0,1",
-      "Scale": "40.64521,43.97287,0.34187",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "5b7df87c-5158-460b-ae4f-7ca1ac9bd37c",
-          "__enabled": true,
-          "Flags": 0,
-          "BodyGroups": 18446744073709551615,
-          "CreateAttachments": false,
-          "LodOverride": null,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Materials": null,
-          "Model": "models/dev/box.vmdl",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "RenderType": "Off",
-          "Tint": "0.27442,0.22336,0.22336,1"
-        },
-        {
-          "__type": "Sandbox.BoxCollider",
-          "__guid": "e62c86b5-0835-473c-97a5-922eb0d6493e",
-          "__enabled": true,
-          "Flags": 0,
-          "Center": "0,0,0",
-          "ColliderFlags": 0,
-          "Elasticity": null,
-          "Friction": null,
-          "IsTrigger": false,
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "OnObjectTriggerEnter": null,
-          "OnObjectTriggerExit": null,
-          "OnTriggerEnter": null,
-          "OnTriggerExit": null,
-          "RollingResistance": null,
-          "Scale": "50,50,50",
-          "Static": true,
-          "Surface": null,
-          "SurfaceVelocity": "0,0,0"
-        },
-        {
-          "__type": "Sandbox.NavMeshArea",
-          "__guid": "5ca0ad01-2cdf-4bd8-8994-4391add7cd6c",
-          "__enabled": true,
-          "Flags": 0,
-          "Area": null,
-          "IsBlocker": true,
-          "LinkedCollider": null,
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "SceneVolume": {
-            "Type": "Box",
-            "Sphere": {
-              "Center": "0,0,0",
-              "Radius": 10
-            },
-            "Box": {
-              "Mins": "-50,-50,-50",
-              "Maxs": "50,50,50"
-            },
-            "Capsule": {
-              "CenterA": "0,0,10",
-              "CenterB": "0,0,90",
-              "Radius": 10
-            }
-          }
-        }
-      ],
-      "Children": []
-    },
-    {
       "__guid": "cb9a8398-a4c2-4c12-a45a-ef78c76d8003",
       "__version": 2,
       "Flags": 0,
       "Name": "Sun",
-      "Position": "94.46371,26.88927,339.4326",
+      "Position": "94.47574,26.88936,339.4334",
       "Rotation": "0,0.8660254,0,0.5000001",
       "Scale": "1,1,1",
       "Tags": "light_directional,light",
@@ -208,9 +69,26 @@
           "__type": "Sandbox.DirectionalLight",
           "__guid": "c51a6e81-409d-4523-835f-7b873c404a05",
           "__enabled": true,
+          "Flags": 512,
+          "FogMode": "Disabled",
+          "FogStrength": 0.18181819,
+          "LightColor": "0.91373,0.98039,1,1",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Shadows": true,
+          "SkyColor": "0,0,0,0"
+        },
+        {
+          "__type": "Sandbox.DirectionalLight",
+          "__guid": "8d6d2366-b857-4a79-851b-5607e4e347a5",
+          "__enabled": true,
           "Flags": 0,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
+          "FogMode": "Disabled",
+          "FogStrength": 0.16233766,
           "LightColor": "0.91373,0.98039,1,1",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
@@ -229,10 +107,10 @@
       "__version": 2,
       "Flags": 0,
       "Name": "Player Controller",
-      "Position": "-17.52557,45.07109,-15.76886",
+      "Position": "-2455.767,48.627,31.95937",
       "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
-      "Tags": "",
+      "Tags": "player",
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkFlags": 0,
@@ -416,6 +294,29 @@
           "RemoveUnownedItems": true,
           "Source": "OwnerConnection",
           "WorkshopItems": []
+        },
+        {
+          "__type": "Sandbox.NavMeshAgent",
+          "__guid": "8a594391-2517-40e7-ace7-bfc188cec7f5",
+          "__enabled": true,
+          "Flags": 0,
+          "Acceleration": 120,
+          "AllowDefaultArea": true,
+          "AllowedAreas": [],
+          "AutoTraverseLinks": true,
+          "ForbiddenAreas": [],
+          "Height": 64,
+          "MaxSpeed": 120,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Radius": 16,
+          "Separation": 0.25,
+          "UpdatePosition": true,
+          "UpdateRotation": false
         }
       ],
       "Children": [
@@ -558,11 +459,11 @@
       ]
     },
     {
-      "__guid": "7c8838f9-5641-4f52-b3a5-4843ac0ebcc5",
+      "__guid": "aa55b2b0-3430-4ea6-b0ad-dfbdc07c75e0",
       "__version": 2,
       "Flags": 0,
-      "Name": "mannequin",
-      "Position": "336.9565,-427.4761,-17.66356",
+      "Name": "Map",
+      "Position": "0,0,0",
       "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
       "Tags": "",
@@ -574,87 +475,203 @@
       "OwnerTransfer": 1,
       "Components": [
         {
-          "__type": "Sandbox.SkinnedModelRenderer",
-          "__guid": "e944d1c5-edad-4d8a-8532-98583dec4441",
+          "__type": "Sandbox.MapInstance",
+          "__guid": "2d769e34-b0d9-4855-a7e6-eaafa52fafc1",
           "__enabled": true,
           "Flags": 0,
-          "AnimationGraph": null,
-          "BodyGroups": 18446744073709551615,
-          "BoneMergeTarget": null,
-          "CreateAttachments": false,
-          "CreateBoneObjects": false,
-          "LodOverride": null,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Materials": null,
-          "Model": "models/citizen_mannequin/mannequin.vmdl",
-          "Morphs": {},
+          "__version": 1,
+          "EnableCollision": true,
+          "MapName": "maps/untitled_1.vmap",
+          "NoOrigin": false,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
-          "Parameters": {
-            "bools": {},
-            "ints": {},
-            "floats": {},
-            "vectors": {},
-            "rotations": {}
-          },
-          "PlaybackRate": 1,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "RenderType": "On",
-          "Sequence": {
-            "Name": null,
-            "Looping": true,
-            "Blending": false
-          },
-          "Tint": "1,1,1,1",
-          "UseAnimGraph": true
-        },
-        {
-          "__type": "Sandbox.NavMeshAgent",
-          "__guid": "e2dc5a2f-61d2-467b-8bed-0fe6238a5937",
-          "__enabled": true,
-          "Flags": 512,
-          "Acceleration": 120,
-          "AllowDefaultArea": true,
-          "AllowedAreas": [],
-          "AutoTraverseLinks": true,
-          "ForbiddenAreas": [],
-          "Height": 64,
-          "MaxSpeed": 120,
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 16,
-          "Separation": 0.25,
-          "UpdatePosition": true,
-          "UpdateRotation": false
-        },
-        {
-          "__type": "ZombieAi",
-          "__guid": "5cc22d1e-578b-4b8f-83f1-73251d293a06",
-          "__enabled": true,
-          "Flags": 0,
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null
+          "OnMapLoaded": null,
+          "OnMapUnloaded": null,
+          "UseMapFromLaunch": false
         }
       ],
       "Children": []
+    },
+    {
+      "__guid": "547f6be0-9bfb-4a08-b41a-00f2b80eab6a",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "ZombieEndPath",
+      "Position": "-2678.995,-165.4318,45.27068",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [],
+      "Children": []
+    },
+    {
+      "__guid": "6de66e80-f531-41c6-a35c-b3a741d10a7f",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "ZombieSpawns",
+      "Position": "-3488.428,-5527.951,32.06195",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [],
+      "Children": [
+        {
+          "__guid": "f8e9582c-3cd0-429d-a16b-590585aedd98",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "ZombieStartPath (1)",
+          "Position": "0,0,0",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "zombiespawner",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "ZombieSpawns",
+              "__guid": "2ac6af65-3add-4b7c-b7ac-0adf4677ed18",
+              "__enabled": true,
+              "Flags": 0,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "ZombiePrefab": {
+                "_type": "gameobject",
+                "prefab": "prefabs/zombie.prefab"
+              }
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "869327c1-7c4b-4e68-bceb-98edf620ce4f",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "ZombieStartPath (2)",
+          "Position": "428.9849,0,0",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "zombiespawner",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "ZombieSpawns",
+              "__guid": "0a48133c-3dda-41bc-bc1e-1e955468769a",
+              "__enabled": true,
+              "Flags": 0,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "ZombiePrefab": {
+                "_type": "gameobject",
+                "prefab": "prefabs/zombie.prefab"
+              }
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "04b84213-763b-4d5c-84e3-e0ed194abcc3",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "ZombieStartPath (3)",
+          "Position": "971.4634,0,0",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "zombiespawner",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "ZombieSpawns",
+              "__guid": "7748cfb3-f4ab-4a92-8fc2-3f4dcc44facb",
+              "__enabled": true,
+              "Flags": 0,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "ZombiePrefab": {
+                "_type": "gameobject",
+                "prefab": "prefabs/zombie.prefab"
+              }
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "977118ca-29cd-4e2b-935f-4c547e3f2fea",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "ZombieStartPath (4)",
+          "Position": "1352.366,-29.375,-0.0647583",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "zombiespawner",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "ZombieSpawns",
+              "__guid": "c5adcfb7-ad27-4d0d-a7de-589028ce3449",
+              "__enabled": true,
+              "Flags": 0,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "ZombiePrefab": {
+                "_type": "gameobject",
+                "prefab": "prefabs/zombie.prefab"
+              }
+            }
+          ],
+          "Children": []
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -663,7 +680,7 @@
     "WantsSystemScene": true,
     "Metadata": {},
     "NavMesh": {
-      "Enabled": false,
+      "Enabled": true,
       "IncludeStaticBodies": true,
       "IncludeKeyframedBodies": true,
       "EditorAutoUpdate": false,
@@ -673,7 +690,18 @@
       "AgentMaxSlope": 40,
       "ExcludedBodies": "",
       "IncludedBodies": "",
-      "CustomBounds": false
+      "CustomBounds": false,
+      "BakedDataPath": {
+        "$reference_type": "filereference",
+        "path": "test_room_scene_data/navmesh/baked.navdata"
+      }
+    },
+    "GameObjectSystems": {
+      "Sandbox.Clutter.ClutterGridSystem": {
+        "Storage": {
+          "$blob": "f83a3584-845b-4538-8196-170fa3151a7b"
+        }
+      }
     }
   },
   "ResourceVersion": 3,
