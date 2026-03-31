@@ -5,51 +5,68 @@ public sealed class Turret : Component
 {
     [Property] public float RotationSpeed { get; set; } = 180f;
     [Property] public float DetectionRange { get; set; } = 1000f;
+    [Property] public float FireRange { get; set; } = 800f;
+    [Property] public float Damage { get; set; } = 5f;
+    [Property] public float FireRate { get; set; } = 2f;
     [Property] public string EnemyTag { get; set; } = "enemy";
     [Property] public bool InstantRotation { get; set; } = false;
     
+    private float nextFireTime;
+    private GameObject currentTarget;
+    
     protected override void OnUpdate()
     {
-        // Ищем все объекты с тегом "enemy"
+        FindClosestEnemy();
+        
+        if (currentTarget != null && currentTarget.IsValid())
+        {
+            RotateTowardsTarget();
+            
+            var distance = GameObject.WorldPosition.Distance(currentTarget.WorldPosition);
+            if (distance <= FireRange && Time.Now >= nextFireTime)
+            {
+                Shoot();
+                nextFireTime = Time.Now + (1f / FireRate);
+            }
+        }
+    }
+    
+    private void FindClosestEnemy()
+    {
         var enemies = Scene.GetAllComponents<ZombieAi>()
             .Where(z => z.GameObject.Tags.Has(EnemyTag))
             .ToList();
         
         if (!enemies.Any())
         {
-            Log.Info("No enemies found");
+            currentTarget = null;
             return;
         }
         
         var myPos = GameObject.WorldPosition;
         
-        // Находим ближайшего врага в радиусе действия
         var closest = enemies
             .Where(z => z.GameObject.WorldPosition.Distance(myPos) <= DetectionRange)
             .OrderBy(z => z.GameObject.WorldPosition.Distance(myPos))
             .FirstOrDefault();
         
-        if (closest == null)
-        {
-            Log.Info("No enemies in detection range");
-            return;
-        }
+        currentTarget = closest?.GameObject;
+    }
+    
+    private void RotateTowardsTarget()
+    {
+        if (currentTarget == null) return;
         
-        var targetPos = closest.GameObject.WorldPosition;
-        var distance = targetPos.Distance(myPos);
+        var myPos = GameObject.WorldPosition;
+        var targetPos = currentTarget.WorldPosition;
         var direction = (targetPos - myPos).Normal;
-        
-        Log.Info($"Target found: {closest.GameObject.Name}, Distance: {distance:F2}");
         
         if (InstantRotation)
         {
-            // Мгновенный поворот
             GameObject.WorldRotation = Rotation.LookAt(direction);
-            Log.Info($"Instant rotation to target");
         }
         else
         {
-            // Плавный поворот с ограничением скорости
             var targetRotation = Rotation.LookAt(direction);
             var newRotation = Rotation.Slerp(
                 GameObject.WorldRotation, 
@@ -57,6 +74,25 @@ public sealed class Turret : Component
                 RotationSpeed * Time.Delta / 180f
             );
             GameObject.WorldRotation = newRotation;
+        }
+    }
+    
+    private void Shoot()
+    {
+        if (currentTarget == null || !currentTarget.IsValid())
+            return;
+        
+        var startPos = GameObject.WorldPosition;
+        var direction = (currentTarget.WorldPosition - startPos).Normal;
+        
+        var tr = Scene.Trace.Ray(startPos, startPos + direction * FireRange)
+            .IgnoreGameObject(GameObject)
+            .Run();
+        
+        var enemy = tr.GameObject?.Components.Get<ZombieAi>();
+        if (enemy != null)
+        {
+            enemy.TakeDamage(Damage);
         }
     }
 }

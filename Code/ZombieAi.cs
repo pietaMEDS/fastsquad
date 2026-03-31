@@ -2,19 +2,35 @@ using Sandbox;
 
 public sealed class ZombieAi : Component
 {
-	protected override void OnUpdate()
-	{
-
-
-
-		NavMeshAgent agent = GameObject.GetComponent<NavMeshAgent>();
-
-		var ZobmieEnd = Scene.Directory.FindByName("ZombieEndPath", false).FirstOrDefault();
-
-		agent.MoveTo(ZobmieEnd.WorldPosition);
-
-
-	}
+    private float health = 20f;
+    private NavMeshAgent agent;
+    private GameObject targetEndPoint;
+    
+    protected override void OnStart()
+    {
+        agent = GameObject.GetComponent<NavMeshAgent>();
+        targetEndPoint = Scene.Directory.FindByName("ZombieEndPath", false).FirstOrDefault();
+    }
+    
+    protected override void OnUpdate()
+    {
+        if (agent == null || targetEndPoint == null)
+            return;
+        
+        agent.MoveTo(targetEndPoint.WorldPosition);
+    }
+    
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+        Log.Info($"{GameObject.Name} took {damage} damage! HP: {health}/20");
+        
+        if (health <= 0)
+        {
+            Log.Info($"{GameObject.Name} died!");
+            GameObject.Destroy();
+        }
+    }
 }
 
 
