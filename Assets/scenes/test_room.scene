@@ -294,29 +294,6 @@
           "RemoveUnownedItems": true,
           "Source": "OwnerConnection",
           "WorkshopItems": []
-        },
-        {
-          "__type": "Sandbox.NavMeshAgent",
-          "__guid": "8a594391-2517-40e7-ace7-bfc188cec7f5",
-          "__enabled": true,
-          "Flags": 0,
-          "Acceleration": 120,
-          "AllowDefaultArea": true,
-          "AllowedAreas": [],
-          "AutoTraverseLinks": true,
-          "ForbiddenAreas": [],
-          "Height": 64,
-          "MaxSpeed": 120,
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 16,
-          "Separation": 0.25,
-          "UpdatePosition": true,
-          "UpdateRotation": false
         }
       ],
       "Children": [
@@ -341,7 +318,7 @@
               "__guid": "708d1ebf-4e89-424f-9444-6ec534051b9c",
               "__enabled": true,
               "Flags": 0,
-              "AnimationGraph": null,
+              "AnimationGraph": "models/citizen/citizen_human_m.vanmgrph",
               "BodyGroups": 341,
               "BoneMergeTarget": null,
               "CreateAttachments": false,
@@ -672,6 +649,112 @@
           "Children": []
         }
       ]
+    },
+    {
+      "__guid": "e01a13e5-47e0-4fbf-a100-7e8a5596cacd",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Cube",
+      "Position": "-2685.049,-1269.348,57.02942",
+      "Rotation": "0,0,0,1",
+      "Scale": "42.33429,1,1.469297",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "8da92959-ff96-48d1-aa2a-c4553fa7b66b",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/dev/box.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "4dad2b3c-4120-4679-a8d5-f47bfbc27a15",
+          "__enabled": true,
+          "Flags": 0,
+          "Center": "0,0,0",
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": {
+            "__version": 9,
+            "__guid": "4bfe8af7-3e80-44b5-a262-665b3d8c3cc5",
+            "__changeId": 20,
+            "UserData": {
+              "Title": "On Collider Enter",
+              "ReferencedComponentTypes": []
+            },
+            "Variables": [],
+            "Nodes": [
+              {
+                "Id": 0,
+                "Type": "input"
+              },
+              {
+                "Id": 4,
+                "Type": "property",
+                "Properties": {
+                  "_name": "GameObject",
+                  "_type": "Sandbox.Component"
+                },
+                "UserData": {
+                  "Position": "156,120"
+                }
+              }
+            ],
+            "Links": [
+              {
+                "SrcId": 0,
+                "SrcName": "obj",
+                "DstId": 4,
+                "DstName": "_target"
+              }
+            ]
+          },
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Scale": "50,50,50",
+          "Static": true,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ],
+      "Children": []
     }
   ],
   "SceneProperties": {
@@ -693,13 +776,13 @@
       "CustomBounds": false,
       "BakedDataPath": {
         "$reference_type": "filereference",
-        "path": "test_room_scene_data/navmesh/baked.navdata"
+        "path": "scenes/test_room_scene_data/navmesh/baked.navdata"
       }
     },
     "GameObjectSystems": {
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "f83a3584-845b-4538-8196-170fa3151a7b"
+          "$blob": "334bf8bc-b3ea-4228-9a8e-08bf2e600172"
         }
       }
     }
