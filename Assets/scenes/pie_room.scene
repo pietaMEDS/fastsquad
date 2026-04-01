@@ -209,7 +209,7 @@
         {
           "__type": "Sandbox.Dresser",
           "__guid": "14c999e8-1a38-44a0-895f-af5237bc2d14",
-          "__enabled": true,
+          "__enabled": false,
           "Flags": 0,
           "ApplyHeightScale": true,
           "BodyTarget": {
@@ -238,7 +238,7 @@
           "__enabled": true,
           "Flags": 0,
           "health": 100,
-          "maxHealth": 100,
+          "maxHealth": 250,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -448,6 +448,41 @@
           "Viewport": "0,0,1,1",
           "ZFar": 10000,
           "ZNear": 10
+        },
+        {
+          "__type": "Sandbox.ScreenPanel",
+          "__guid": "78e4fab8-71e5-4219-97c8-a91d44c566e3",
+          "__enabled": true,
+          "Flags": 0,
+          "AutoScreenScale": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Opacity": 1,
+          "Scale": 1,
+          "ScaleStrategy": "FollowDesktopScaling",
+          "TargetCamera": {
+            "_type": "component",
+            "component_id": "5271268b-b635-49bc-bc1c-d9fc213aaeeb",
+            "go": "86753d27-b010-408d-adf1-fd17f17556dd",
+            "component_type": "CameraComponent"
+          },
+          "ZIndex": 100
+        },
+        {
+          "__type": "Sandbox.HealthRaz",
+          "__guid": "1c3d86de-a98e-436c-8ab2-63d041b4d530",
+          "__enabled": true,
+          "Flags": 0,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
         }
       ],
       "Children": []
@@ -776,7 +811,7 @@
               "Flags": 0,
               "Name": "arm_upper_L_twist1",
               "Position": "5.266991,0.00001335144,-0.00004196167",
-              "Rotation": "-0.0000002980234,-0.0000002025628,0.00000001490117,1",
+              "Rotation": "0,0,0,1",
               "Scale": "1,1,1",
               "Tags": "",
               "Enabled": true,
@@ -1106,7 +1141,7 @@
               "__version": 2,
               "Flags": 0,
               "Name": "arm_elbow_helper_R",
-              "Position": "0.00002861023,-0.00001907349,-0.00004959106",
+              "Position": "0,0,0",
               "Rotation": "0.0000001941795,0.00000008893718,-0.7779697,0.6283019",
               "Scale": "1,1,1",
               "Tags": "",
@@ -1141,7 +1176,7 @@
               "Flags": 0,
               "Name": "arm_upper_R_twist1",
               "Position": "5.267029,0.000003814697,-0.00008392334",
-              "Rotation": "-0.0000002831223,0.0000002472663,0.0000002086164,1",
+              "Rotation": "0,0,0,1",
               "Scale": "1,1,1",
               "Tags": "",
               "Enabled": true,
@@ -1307,7 +1342,7 @@
               "__version": 2,
               "Flags": 0,
               "Name": "leg_knee_helper_R",
-              "Position": "0.00002670288,0.00001037121,-0.00002098083",
+              "Position": "0,0,0",
               "Rotation": "-0.0000001650376,0.0000001707285,0.7185146,0.6955119",
               "Scale": "1,1,1",
               "Tags": "",
@@ -1508,7 +1543,7 @@
               "__version": 2,
               "Flags": 0,
               "Name": "leg_knee_helper_L",
-              "Position": "0.000001907349,0.00000333786,-0.00002336502",
+              "Position": "0,0,0",
               "Rotation": "-0.0000001007633,0.00000003012856,0.7185144,0.6955121",
               "Scale": "1,1,1",
               "Tags": "",
@@ -1611,7 +1646,7 @@
               "Flags": 0,
               "Name": "root_IK",
               "Position": "0.1968501,0.000006738612,0",
-              "Rotation": "0,0,0.0000002384185,1",
+              "Rotation": "0,0,0,1",
               "Scale": "1,1,1",
               "Tags": "",
               "Enabled": true,
@@ -1642,7 +1677,7 @@
               "Flags": 0,
               "Name": "aim_matrix_01",
               "Position": "5.708649,0.000001696757,11.811",
-              "Rotation": "0.00000007549798,0.0000003139164,-0.0000002384185,1",
+              "Rotation": "0,0,0,1",
               "Scale": "1,1,1",
               "Tags": "",
               "Enabled": true,
@@ -1676,7 +1711,7 @@
               "Flags": 0,
               "Name": "aim_matrix_02a",
               "Position": "5.708649,0.000001696756,9.8425",
-              "Rotation": "0.00000007549798,0.0000003139164,-0.0000002384185,1",
+              "Rotation": "0,0,0,1",
               "Scale": "1,1,1",
               "Tags": "",
               "Enabled": true,
@@ -1707,7 +1742,7 @@
               "Flags": 0,
               "Name": "aim_matrix_02b",
               "Position": "3.937,0.000002096973,0.0000009536743",
-              "Rotation": "-0.00000000000001421086,0,0.000000000000004721661,1",
+              "Rotation": "0,0,0,1",
               "Scale": "1,1,1",
               "Tags": "",
               "Enabled": true,
@@ -1934,7 +1969,7 @@
               "IdValue": "a2830c31-fd41-4b27-9dcf-3cbef69192e0"
             },
             "Property": "Position",
-            "Value": "528.4496,-995.3661,9.089998"
+            "Value": "21.15293,-832.9263,-0.04778099"
           },
           {
             "Target": {
@@ -2056,14 +2091,6 @@
           {
             "Target": {
               "Type": "GameObject",
-              "IdValue": "dce22c75-42bb-4754-8e8e-6884aaa45149"
-            },
-            "Property": "Rotation",
-            "Value": "-0.0000006640937,-0.0000001649047,0.00000006705384,1"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
               "IdValue": "51b78016-2977-4fd3-a955-5ab45a908992"
             },
             "Property": "Flags",
@@ -2076,14 +2103,6 @@
             },
             "Property": "Position",
             "Value": "4.429165,0.00001081824,0.000001306964"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "51b78016-2977-4fd3-a955-5ab45a908992"
-            },
-            "Property": "Rotation",
-            "Value": "0.00000005960462,0.0000002384185,-0.0000001788139,1"
           },
           {
             "Target": {
@@ -2560,14 +2579,6 @@
           {
             "Target": {
               "Type": "GameObject",
-              "IdValue": "3945fb3c-8220-4706-b2f4-82f1dc66cf6d"
-            },
-            "Property": "Rotation",
-            "Value": "-0.00000002607704,-0.00000005774203,-0.00000002980234,1"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
               "IdValue": "5bc8f4e6-4f4e-47fc-a909-bb967268ca26"
             },
             "Property": "Flags",
@@ -2580,14 +2591,6 @@
             },
             "Property": "Position",
             "Value": "0.7873974,0.00001859665,-0.00005722046"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "5bc8f4e6-4f4e-47fc-a909-bb967268ca26"
-            },
-            "Property": "Rotation",
-            "Value": "-0.0000001005829,-0.0000001452864,-0.00000008242209,1"
           },
           {
             "Target": {
@@ -3088,14 +3091,6 @@
           {
             "Target": {
               "Type": "GameObject",
-              "IdValue": "5181de09-0ab4-48e0-83ab-98543d87ff8c"
-            },
-            "Property": "Rotation",
-            "Value": "0.00000003352763,-0.00000003725292,-0.00000009685759,1"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
               "IdValue": "68d0b9af-b0fd-45ed-8f68-6408696031bd"
             },
             "Property": "Flags",
@@ -3108,14 +3103,6 @@
             },
             "Property": "Position",
             "Value": "0.7873821,0.00001573563,-0.00006484985"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "68d0b9af-b0fd-45ed-8f68-6408696031bd"
-            },
-            "Property": "Rotation",
-            "Value": "0.000000007450585,-0.0000006121121,0.00000009033835,1"
           },
           {
             "Target": {
@@ -3208,14 +3195,6 @@
           {
             "Target": {
               "Type": "GameObject",
-              "IdValue": "db0e68c3-4efb-4f31-a8b9-4e27656f776a"
-            },
-            "Property": "Rotation",
-            "Value": "-0.0000000298023,-0.0000000894069,-0.0000000596046,1"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
               "IdValue": "723b18de-75e5-446a-a11d-b3aaa3b6c5b0"
             },
             "Property": "Flags",
@@ -3228,14 +3207,6 @@
             },
             "Property": "Position",
             "Value": "4.0984,3.19959,-1.425987"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "723b18de-75e5-446a-a11d-b3aaa3b6c5b0"
-            },
-            "Property": "Rotation",
-            "Value": "-0.0000000298023,-0.0000000894069,-0.0000000596046,1"
           },
           {
             "Target": {
@@ -3352,14 +3323,6 @@
           {
             "Target": {
               "Type": "GameObject",
-              "IdValue": "425f7335-143c-4a94-89bc-867c74a32c6f"
-            },
-            "Property": "Rotation",
-            "Value": "0.0000000298024,-0.00000002980228,0.0000002384187,1"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
               "IdValue": "129c0cc1-fdf3-41e5-a9ee-246ff6f0b4cd"
             },
             "Property": "Flags",
@@ -3396,14 +3359,6 @@
             },
             "Property": "Position",
             "Value": "0.7874069,0.000008404255,-0.00002765656"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "4aaec5a1-075b-47f2-9c2d-1bc2932e6bd0"
-            },
-            "Property": "Rotation",
-            "Value": "-0.0000003576279,-0.0000001192092,0.000000864267,1"
           },
           {
             "Target": {
@@ -3496,14 +3451,6 @@
           {
             "Target": {
               "Type": "GameObject",
-              "IdValue": "6ea2f1ff-0031-4d84-b1d7-d6d061b0f491"
-            },
-            "Property": "Rotation",
-            "Value": "0.0000001192092,0.00000000000002842172,0.0000001490117,1"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
               "IdValue": "6c4880ac-b7e3-418a-a258-c899ad1ca85b"
             },
             "Property": "Flags",
@@ -3540,14 +3487,6 @@
             },
             "Property": "Position",
             "Value": "0.7874126,0.000005781651,-0.00001239777"
-          },
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "63bbd37a-87f9-49c3-a0cf-8347aade5f2c"
-            },
-            "Property": "Rotation",
-            "Value": "0.0000002682208,0.00000002980237,0.00000004470338,1"
           },
           {
             "Target": {
@@ -3669,6 +3608,73 @@
         "6672a898-bbd1-4427-83c7-6ef2105d2d8c": "a0026a4e-13f1-4034-96b3-12229ac9a510",
         "5099abf2-b5a0-4e81-97ff-06c3cc27b6ef": "14785611-3ac0-465c-918b-4945d7df3d93"
       }
+    },
+    {
+      "__guid": "9516dfcd-2d6b-4a09-b976-50e140821ed8",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "ZombieSpawner",
+      "Position": "-214.4935,-2134.088,25.03891",
+      "Rotation": "0,0,0,1",
+      "Scale": "10.33399,11.4575,0.6931491",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "4c57570f-2399-4e17-8237-e8afa89c202e",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": {
+            "indexed": {
+              "0": "materials/dev/dev_grating.vmat"
+            }
+          },
+          "Model": "models/dev/box.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "561.98,561.98,561.98,0.97"
+        },
+        {
+          "__type": "ZombieSpawns",
+          "__guid": "be178ca0-69b7-4853-94ad-6b40e1aa596d",
+          "__enabled": true,
+          "Flags": 0,
+          "BaseCooldown": 5,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "ZombiePrefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/zombie.prefab"
+          }
+        }
+      ],
+      "Children": []
     }
   ],
   "SceneProperties": {
@@ -3696,7 +3702,7 @@
     "GameObjectSystems": {
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "9580d73f-210f-4c11-b871-7e0221d6ada4"
+          "$blob": "06bbf100-5fff-46d6-81da-e9a04c936610"
         }
       }
     }

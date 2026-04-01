@@ -1,0 +1,62 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@namespace Sandbox
+
+<root>
+	<div class="damage-overlay @(showDamage ? "active" : "")"></div>
+</root>
+
+<style>
+.damage-overlay {
+	position: absolute;
+
+	top: 1;
+	left: 1;
+	right: 1;
+	bottom: 1;
+
+	pointer-events: none;
+
+	background: radial-gradient(
+		rgba(255,0,0,0) 20%, 
+		rgba(255,0,0,0.6) 100%
+	);
+
+	opacity: 0;
+	transition: opacity 0.1s ease;
+}
+
+.damage-overlay.active {
+	opacity: 1;
+}
+</style>
+
+@code
+{
+	private bool showDamage = false;
+	private TimeUntil hideTimer;
+
+	protected override void OnStart()
+	{
+		HealthComponent.OnDamageTaken += OnDamage;
+	}
+
+	void OnDamage(float dmg)
+	{
+		showDamage = true;
+		hideTimer = 0.3f; // сколько длится эффект
+		StateHasChanged();
+	}
+
+	protected override void OnUpdate()
+	{
+		if ( showDamage && hideTimer <= 0 )
+		{
+			showDamage = false;
+			StateHasChanged();
+		}
+	}
+
+	protected override int BuildHash() => System.HashCode.Combine(showDamage);
+}
